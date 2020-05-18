@@ -42,7 +42,6 @@ public class TriggerVideo : MonoBehaviour
             videoPlayer.clip = chooseCartoon1;
            // time();
             if (videoPlayer.frame >= 100){
-                Debug.Log("Money");
                 chooser = 2;
             }
             Debug.Log(chooser);
@@ -53,7 +52,6 @@ public class TriggerVideo : MonoBehaviour
         else if (chooser == 2){
             videoPlayer.clip = chooseCartoon2;
             if (videoPlayer.frame >= 100){
-                Debug.Log("Money");
                 chooser = 3;
             }
             Debug.Log(chooser);
@@ -62,7 +60,6 @@ public class TriggerVideo : MonoBehaviour
         {
             videoPlayer.clip = chooseCartoon3;
             if (videoPlayer.frame >= 100){
-                Debug.Log("Money");
                 chooser = 1;
             }
             Debug.Log(chooser);
