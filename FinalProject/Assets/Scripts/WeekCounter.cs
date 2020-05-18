@@ -8,6 +8,8 @@ public class WeekCounter : MonoBehaviour
     public Text counter;
     float currentweek = 0f;
 
+    float count = 0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,7 @@ public class WeekCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        count += 1 * Time.deltaTime;
         currentweek += 1 * Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.UpArrow)){
             changeWeeks();
@@ -25,6 +28,9 @@ public class WeekCounter : MonoBehaviour
         counter.text = currentweek.ToString("0") + " weeks";
     }
     void changeWeeks(){
-        currentweek = 1f;
+        if (count >= 30){
+            currentweek = 1f;
+            count = 0;
+        }
     }
 }
